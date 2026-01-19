@@ -10,11 +10,11 @@ public class Payroll {
         System.out.println("Welcome to the Payroll Program!");
 
         System.out.print("How many hours did you work this week? ");
-        int hours_worked = scan.nextInt();
+        double hours_worked = scan.nextDouble();
 
         scan = new Scanner(System.in);
         System.out.print("How many children do you have? ");
-        int children_num = scan.nextInt();
+        double children_num = scan.nextDouble();
 
         // prevents this variable to become negative
         if(children_num < 0){
@@ -67,15 +67,15 @@ public class Payroll {
         System.out.println("Thank you for using the Payroll Program!");
     }
 
-    double calculate_gross_income(int hours, double pay_rate){
+    double calculate_gross_income(double hours, double pay_rate){
         if(hours <= 40) return hours * pay_rate;
         else {
-            int extra_hours = hours - 40;
+            double extra_hours = hours - 40;
             return extra_hours * pay_rate * 1.5 + (hours - extra_hours) * pay_rate;
         }
     }
 
-    double calculate_insurance_cost(int children_num){
+    double calculate_insurance_cost(double children_num){
         if(children_num >= 3) return 35.00;
         return 15.00;
     }
@@ -92,7 +92,7 @@ public class Payroll {
         return taxes;
     }
 
-    void choose_life_insurance_plan(int children_num){
+    void choose_life_insurance_plan(double children_num){
         var scanner = new Scanner(System.in);
         System.out.println("Which life insurance plan do you want to select?");
         System.out.println(" (1) no plan \n (2) single plan \n (3) married plan \n (4) married with children plan \n\n");
