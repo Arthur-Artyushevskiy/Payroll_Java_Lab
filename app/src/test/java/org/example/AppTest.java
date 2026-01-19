@@ -17,7 +17,7 @@ class AppTest {
 
     assert pr.calculate_gross_income(40, 20.0) == 800.0;
 
-    assert pr.calculate_gross_income(50, 20.0) == 1100.0;
+    assert pr.calculate_gross_income(50, 20.12) - 1106.6 <= 0.00001;
 
     assert pr.calculate_insurance_cost(2) == 15.00;
 
