@@ -38,30 +38,30 @@ public class Payroll {
 
         System.out.println("Payroll Stub: \n\n");
         System.out.println("Hours:   " + hours_worked + "\n");
-        System.out.println("Rate:   " + pay_rate + "$/hr" + "\n");
+        System.out.println("Rate:    " + pay_rate + " $/hr" + "\n");
         System.out.println("Gross:   $" + gross_income + "\n\n");
 
         gross_income = gross_income - insurance_cost -life_insurance_plan_cost;
         for (double govTax : gov_taxes) gross_income -= govTax;
 
-        System.out.println("SocSec:   $" + Math.round(gov_taxes[0] * 100)/100.0 + "\n");
-        System.out.println("FedTax:   $" + Math.round(gov_taxes[1] * 100)/100.0 + "\n");
+        System.out.println("SocSec:  $" + Math.round(gov_taxes[0] * 100)/100.0 + "\n");
+        System.out.println("FedTax:  $" + Math.round(gov_taxes[1] * 100)/100.0 + "\n");
         System.out.println("StTax:   $" + Math.round(gov_taxes[2] * 100)/100.0 + "\n");
 
 
         if(gross_income<0){
             gross_income += gov_taxes[3] + insurance_cost + life_insurance_plan_cost;
-            System.out.println("Net:   $" + Math.round(gross_income * 100)/100.0 + "\n");
-            System.out.println("The employee still owes:\n\n");
+            System.out.println("Net:     $" + Math.round(gross_income * 100)/100.0 + "\n");
+            System.out.println("The employee still owes:");
             System.out.println("Union:   $" + Math.round(gov_taxes[3]) + "\n");
-            System.out.println("Ins:   $" + insurance_cost + "\n");
-            System.out.println("LifeIns:   $" + life_insurance_plan_cost + "\n");
+            System.out.println("Ins:     $" + insurance_cost + "\n");
+            System.out.println("LifeIns: $" + life_insurance_plan_cost + "\n");
         }
         else{
             System.out.println("Union:   $" + Math.round(gov_taxes[3]) + "\n");
-            System.out.println("Ins:   $" + insurance_cost + "\n");
-            System.out.println("LifeIns:   $" + life_insurance_plan_cost + "\n");
-            System.out.println("Net:   $" + Math.round(gross_income * 100)/100.0 + "\n");
+            System.out.println("Ins:     $" + insurance_cost + "\n");
+            System.out.println("LifeIns: $" + life_insurance_plan_cost + "\n");
+            System.out.println("Net:     $" + Math.round(gross_income * 100)/100.0 + "\n");
         }
 
         System.out.println("Thank you for using the Payroll Program!");
