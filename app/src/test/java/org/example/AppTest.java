@@ -29,7 +29,7 @@ class AppTest {
   }
 
   @Test
-  void check_tax_helper_method(){
+  void check_tax_helper_method_whole_number(){
       Payroll pr = new Payroll();
       double income = 1000.0;
       double[] taxes = pr.calculate_gov_tax(income);
@@ -46,21 +46,24 @@ class AppTest {
       // Union Dues: Flat 10
       assertEquals(10.0, taxes[3]);
 
-      double income_2 = 2.34;
-      double[] taxes_2 = pr.calculate_gov_tax(income_2);
-
-
-      // SocSec: 6% of 2.34 = 0.1404
-      assertEquals(0.1404, taxes_2[0], 0.00001);
-
-      // FedTax: 14% of 2.34 = 0.3276
-      assertEquals(0.3276, taxes_2[1], 0.00001);
-
-      // StTax: 5% of 2.34 = 0.117
-      assertEquals(0.117, taxes_2[2], 0.00001);
-
-
-      // Union Dues: Flat 10
-      assertEquals(10.0, taxes_2[3]);
   }
+    @Test
+    void check_tax_helper_method_decimal_number() {
+        Payroll pr = new Payroll();
+        double income = 2.34;
+        double[] taxes = pr.calculate_gov_tax(income);
+
+        // SocSec: 6% of 2.34 = 0.1404
+        assertEquals(0.1404, taxes[0], 0.00001);
+
+        // FedTax: 14% of 2.34 = 0.3276
+        assertEquals(0.3276, taxes[1], 0.00001);
+
+        // StTax: 5% of 2.34 = 0.117
+        assertEquals(0.117, taxes[2], 0.00001);
+
+        // Union Dues: Flat 10
+        assertEquals(10.0, taxes[3]);
+    }
+
 }
