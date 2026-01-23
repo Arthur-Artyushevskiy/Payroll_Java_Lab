@@ -37,31 +37,31 @@ public class Payroll {
 
 
         System.out.println("Payroll Stub: \n\n");
-        System.out.println("Hours:   " + hours_worked + "\n");
-        System.out.println("Rate:    " + pay_rate + " $/hr" + "\n");
-        System.out.println("Gross:   $" + gross_income + "\n\n");
+        System.out.printf("Hours:   %.2f%n", hours_worked);
+        System.out.printf("Rate:    $%.2f/hr%n", pay_rate);
+        System.out.printf("Gross:   $%.2f%n%n", gross_income);
 
         gross_income = gross_income - insurance_cost -life_insurance_plan_cost;
         for (double govTax : gov_taxes) gross_income -= govTax;
 
-        System.out.println("SocSec:  $" + Math.round(gov_taxes[0] * 100)/100.0 + "\n");
-        System.out.println("FedTax:  $" + Math.round(gov_taxes[1] * 100)/100.0 + "\n");
-        System.out.println("StTax:   $" + Math.round(gov_taxes[2] * 100)/100.0 + "\n");
+        System.out.printf("SocSec:  $%.2f%n", gov_taxes[0]);
+        System.out.printf("FedTax:  $%.2f%n", gov_taxes[1]);
+        System.out.printf("StTax:   $%.2f%n", gov_taxes[2]);
 
 
         if(gross_income<0){
             gross_income += gov_taxes[3] + insurance_cost + life_insurance_plan_cost;
-            System.out.println("Net:     $" + Math.round(gross_income * 100)/100.0 + "\n");
+            System.out.printf("Net:     $%.2f%n", gross_income);
             System.out.println("The employee still owes:");
-            System.out.println("Union:   $" + Math.round(gov_taxes[3]) + "\n");
-            System.out.println("Ins:     $" + insurance_cost + "\n");
-            System.out.println("LifeIns: $" + life_insurance_plan_cost + "\n");
+            System.out.printf("Union:   $%.2f%n", gov_taxes[3]);
+            System.out.printf("Ins:     $%.2f%n", insurance_cost);
+            System.out.printf("LifeIns: $%.2f%n", life_insurance_plan_cost);
         }
         else{
-            System.out.println("Union:   $" + Math.round(gov_taxes[3]) + "\n");
-            System.out.println("Ins:     $" + insurance_cost + "\n");
-            System.out.println("LifeIns: $" + life_insurance_plan_cost + "\n");
-            System.out.println("Net:     $" + Math.round(gross_income * 100)/100.0 + "\n");
+            System.out.printf("Union:   $%.2f%n", gov_taxes[3]);
+            System.out.printf("Ins:     $%.2f%n", insurance_cost);
+            System.out.printf("LifeIns: $%.2f%n", life_insurance_plan_cost);
+            System.out.printf("Net:     $%.2f%n", gross_income);
         }
 
         System.out.println("Thank you for using the Payroll Program!");
@@ -81,14 +81,14 @@ public class Payroll {
     }
 
     double[] calculate_gov_tax(double income){
-       var taxes = new double[4];
-       double soc_security = income * 0.06;
-       taxes[0] = soc_security;
-       double federal_tax = income * 0.14;
-       taxes[1] = federal_tax;
-       double state_tax = income * 0.05;
-       taxes[2] = state_tax;
-       taxes[3] = 10.00; // Local Union dues
+        var taxes = new double[4];
+        double soc_security = income * 0.06;
+        taxes[0] = soc_security;
+        double federal_tax = income * 0.14;
+        taxes[1] = federal_tax;
+        double state_tax = income * 0.05;
+        taxes[2] = state_tax;
+        taxes[3] = 10.00; // Local Union dues
         return taxes;
     }
 

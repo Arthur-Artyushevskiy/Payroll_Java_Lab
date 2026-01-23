@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b4c8edd-1a29-493e-96ea-23cfe8c93c1b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/Payroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/Payroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AppTest.itWorks.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Payroll_Java_Lab [:app:org.example.App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/Arthur/Documents/GitHub/Payroll_Java_Lab&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AppTest.check_gross_income.executor": "Debug",
+    "Gradle.AppTest.executor": "Run",
+    "Gradle.AppTest.itWorks.executor": "Run",
+    "Gradle.Payroll_Java_Lab [:app:org.example.App.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/Arthur/Documents/GitHub/Payroll_Java_Lab"
   }
-}</component>
-  <component name="RunManager" selected="Application.App">
+}]]></component>
+  <component name="RunManager" selected="Gradle.AppTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="payroll-java-template.app.main" />
